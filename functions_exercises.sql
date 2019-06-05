@@ -37,7 +37,7 @@ FROM employees
 WHERE last_name like 'e%'
   AND last_name like '%e';
 
-SELECT datediff(curdate(), hire_date) AS 'Working Time'
+SELECT CONCAT(first_name, ' ', last_name) AS 'Employee Name', (datediff(curdate(), hire_date)) AS 'Working Time In Days'
 FROM employees
 WHERE hire_date like '199%'
   AND birth_date like '%12-25%'
